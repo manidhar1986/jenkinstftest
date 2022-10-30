@@ -14,10 +14,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
+  count = 2
   ami           = "ami-090fa75af13c156b4"
   instance_type = var.instance_types
 
-  tags = {
-    Name = "AppServer-1"
-  }
+  
 }
