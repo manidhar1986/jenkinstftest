@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-090fa75af13c156b4"
   instance_type = var.instance_types
-
+  subnet_id = "subnet-094aad7d002b3b1c2"
   tags = {
     Name = "AppServer-1"
   }
